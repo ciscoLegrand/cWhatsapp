@@ -1,7 +1,7 @@
 class WhatsappManager
   def initialize
     # @client = WhatsappSdk::Api::Client.new(Figaro.env.whatsapp_token.to_s) #? FIX: token is invalid passing figaro envç
-    client = WhatsappSdk::Api::Client.new("EAAP7zxmZBCsUBAGzzzgtT8TcNMZAzEZA2wqt6MRecM4N6suLDfpmiZAjsVyzzMTqVWRkZBs5RMZBZArFtlZBIo5bpoWCYnTUi4eK17B6JyiouUbn6tgqjmnhct5vpRFjs5e9ZC2ApJfOI4ZBRQIImph18tneDzZCtUMrpeQyQR4S04LXdJ055gXUyO31D6nJrTw2KUukMldUtcmDQZDZD")
+    client = WhatsappSdk::Api::Client.new('EAAP7zxmZBCsUBAGgCAbpZCmj0DIJiHjaikIjF8lYAjfeQAGYyJkKLwPRI5H9cCvQsUySn1LJ5e81Fs5rIfjmGxLmw4hRwSZBVHfZA7DLwmUTvBSzrmrGrnDTPEh1hLZAR08a8DahHnPUli2DZCiZBUW9Re9bT6cDZBHHzOEcZC7AOsFMBwBJTjVkFNFO3mjmJwgiwdIHP7ZBZA07AZDZD')
     @messages_api = WhatsappSdk::Api::Messages.new(client)
     phone_numbers_api = WhatsappSdk::Api::PhoneNumbers.new(client)
     
