@@ -7,7 +7,10 @@
     <button type="button" class="text-purple-700 hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-purple-400 dark:text-purple-400 dark:hover:text-white dark:hover:bg-purple-500 dark:focus:ring-purple-900">Regular</button>
   </div>
 
-  <div class="w-full flex justify-center">
-    <%= cookies[:data] %>
+  <div class="w-full flex flex-col justify-center">
+      <button type="button" class="text-purple-700 hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-purple-400 dark:text-purple-400 dark:hover:text-white dark:hover:bg-purple-500 dark:focus:ring-purple-900 overflow-hidden"><%= ENV['WHATSAPP_TOKEN'] %></button>
+    <div class="border-2 border-red-500 hover:border-red-300 bg-red-100 hover:bg-red-50 opacity-70 text-red-600 px-10 py-7 rounded text-semibold text-lg">
+      <%= JSON.pretty_generate(JSON.parse(cookies[:data])) %>
+    </div>
   </div>
 </div>
